@@ -1,51 +1,33 @@
-let mqtt = require('mqtt')
-let options = {
-  port: 16086,
-  clientId: 'mqttjs_' + Math.random().toString(16).substr(2, 8),
-  username: "qkjtffif",
-  password: 'JlqxGc-L0ocS'
-};
+let afinn; 
 
-let client = mqtt.connect('mqtt://hairdresser.cloudmqtt.com', options);
+function preload() {
+  afinn = loadJSON('afinn111.json');
+}
+
+var myRec = new p5.SpeechRec(); // P5.SpeechRec object
+function setup(){
+	createCanvas(800, 400);
+	background(255, 255, 255);
+
+	myRec.onResult = analyzePhrase;
+	myRec.start(true, false); 
+}
 
 
-var myRec = new p5.SpeechRec(); // new P5.SpeechRec object
 
-
-	function setup()
-	{
-		// graphics stuff:
-		createCanvas(800, 400);
-		background(255, 255, 255);
-		fill(0, 0, 0, 255);
-		// instructions:
-		textSize(32);
-		textAlign(CENTER);
-		text("say something", width/2, height/2);
-		myRec.onResult = showResult;
-    myRec.start(); //begin listening - only executes once 
-    // need to add continous property - cont listen
-	}
-
-	function showResult()
-	{
-		if(myRec.resultValue==true) {
-      client.on('connect', function() { // When connected
-        //Subscribe to a topic
-        client.subscribe('topic1/kennedy', function() {});
-        //Publish a new message to the broker every 4 seconds
-      
-        client.publish('topic1/kennedy', String(myRec.resultString), 
-        function() {
-          console.log(myRec.resultString);
-          client.end(); // Close the connection when published
-        });
-      });
-
-			background(192, 255, 192);
-			text(myRec.resultString, width/2, height/2);
-			//console.log(myRec.resultString);
+function analyzePhrase()
+{
+	if(myRec.resultValue==true) { //if speech is detected
+		let phrase = myRec.resultString.replace(/[^\w\s]|_/g, "").split(" ") //convert speech string to list of elements split by spaces
+		console.log(phrase);
+		let phraseScore = 0; 
+		for (let word = 0; word < phrase.length; word++) {
+			if (afinn.hasOwnProperty(phrase[word])) {
+				phraseScore += Number(afinn[phrase[word]]); 	
+			}
 		}
-  }
-  
+		console.log(phraseScore/phrase.length);
+	}
+}
+
   
