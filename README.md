@@ -1,16 +1,61 @@
-# GROW [working title]
-
-### The Big Idea: 
-Depict the relationship between positivity and progress using the speech library and sentiment analysis. 
-
-### Project Overview: 
-I will explore the impact of positive and negative external forces on living beings. Using the speech library, I will take users’ speech as input and analyze whether the phrases’ emotional sentiment registers as negative, positive or neutral. This will be achieved using IBM Watson’s Natural Language Understanding service. The users’ input will be sent using an MQTT broker to be processed. 
-The p5 sketch will depict a seedling that will progress or regress depending on the users’ input. If the speech is positive it will lead to growth while negative speech will cause decay. 
+# GROW
+## Kennedy Cambra-Cho
+### Creative Coding Lab 2020
+#### Interactive Media Arts, NYU Shanghai
+---
+# Concept
 
 
-[p5.speech](https://idmnyu.github.io/p5.js-speech/)
-[It's True—You Really Should Talk to Your Plants](https://www.thespruce.com/should-you-talk-to-your-plants-3972298)
-[Tree Generation](https://devpost.com/software/realistic-tree-generation-with-the-lindenmayer-system)
+<table border="0">
+ <tr>
+    <td><img src="assets/test.png" width="1280"</img></td>
+    <td><i style="font-size:10px">This project attempts to depict the relationship between positivity and progress using the speech library and sentiment analysis.<br>The p5 sketch will depict a seedling that will progress or regress depending on the users’ input. If the speech is positive it will lead to growth while negative speech will cause decay. <br><br> (Cambra-Cho, 2020) </i></td>
+ </tr>
+</table>
 
-### Learning Goals: 
-I want to learn how to incorporate additional libraries into my p5 sketches. 
+# Inspirations
+
+<p align="center">
+  <img width="1280" src="assets/cclFinal-inspiration.png">
+</p>
+
+# Physical Prototype
+<img width="1280" src="assets/test.png">
+<table border="0">
+ <tr>
+    <td><img src="assets/test.png" width="1280"</img></td>
+    <td><img src="assets/test.png" width="1280"</img></td>
+    <td><img src="assets/test.png" width="1280"</img></td>
+ </tr>
+</table>
+
+# Network Diagram
+<p align="center">
+  <img width="400" src="assets/test.png">
+</p>
+<br>
+Coming Soon!
+
+# Code
+Coming Soon!
+
+<table border="0">
+ <tr>
+    <td><img src="assets/test.png"</img></td>
+    <td><img src="assets/test.png"</img></td>
+    <td><img src="assets/test.png"</img></td>
+ </tr>
+</table>
+
+# Presentation
+Coming Soon!
+
+# Final Implementation
+Coming Soon!
+
+# References
+* [p5.speech](https://idmnyu.github.io/p5.js-speech/)  
+* [It's True—You Really Should Talk to Your Plants](https://www.thespruce.com/should-you-talk-to-your-plants-3972298)  
+* [Tree Generation](https://devpost.com/software/realistic-tree-generation-with-the-lindenmayer-system)  
+* [Animated Fractal Tree](https://www.youtube.com/watch?v=DTTZDMnyFco)
+* [Animated Fractal Tree GitHub](https://github.com/someuser-321/TreeGenerator)
