@@ -13,8 +13,6 @@ function setup(){
 	myRec.start(true, false); 
 }
 
-
-
 function analyzePhrase()
 {
 	if(myRec.resultValue==true) { //if speech is detected
