@@ -64,19 +64,11 @@ class Branch {
 		this.finished = false;
 		this.currentDepth = currentDepth; 
 	}
-	
-
-	jitter() {
-    this.end.x += random(-1, 1);
-    this.end.y += random(-1, 1);
-  };
-
   show() {
 		strokeWeight(12 * Math.pow((maxDepth - this.currentDepth + 1) / maxDepth, 2));
     stroke(156, 139, 100);
     line(this.begin.x, this.begin.y, this.end.x, this.end.y);
-  };
-
+  }
   branchA() {
     var dir = p5.Vector.sub(this.end, this.begin);
     dir.rotate(PI / 6);
@@ -123,6 +115,7 @@ function draw() {
 	ellipse(0, height, width+width/3, height/4); 
 	fill(182, 252, 3);
 	ellipse(width, height, -width-width/3, height/4);
+
   for (var i = 0; i < tree.length; i++) {
     tree[i].show();
   }
