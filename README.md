@@ -41,8 +41,8 @@ Coming Soon!
 
 <table border="0">
  <tr>
-    <td><img src="assets/test.png"</img></td>
-    <td><img src="assets/test.png"</img></td>
+    <td><img src="assets/AFINN111.png"</img></td>
+    <td><img src="assets/sentimentScoreFunc.png"</img></td>
     <td><img src="assets/test.png"</img></td>
  </tr>
 </table>

@@ -1,0 +1,17 @@
+#info{
+  position: absolute;
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+  font-size: larger;
+  left: 10%; 
+  top: 25%;
+}
+
+#title{
+  font-family: 'Raleway', sans-serif;
+  font-size: xx-large;
+  position: absolute;
+  text-align: center;
+  left: 10%; 
+  top: 5%;
+}
